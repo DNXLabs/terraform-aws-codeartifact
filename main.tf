@@ -1,3 +1,5 @@
+data "aws_region" "current" {}
+
 resource "aws_codeartifact_domain" "domain" {
   domain         = var.domain
   encryption_key = var.kms_key_arn

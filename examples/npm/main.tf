@@ -5,7 +5,7 @@ provider "aws" {
 module "npm_repo" {
     source = "../../"
 
-    domain = "npm_test_domain"
+    domain = "npm-test-domain"
     repositories = {
         npm = {
             name = "npm-repo"

@@ -12,21 +12,31 @@ variable "tags" {
     default = null
 }
 
-# {
-#   npm = {
-#        repository = "test" # optional. if not set, use key
-#        description = "test description"
-#        upstreams = ["test description"]
-#        external_connections = ["test description"]
-#   }
-# }
-# public:npmjs - for the npm public repository.
-# public:pypi - for the Python Package Index.
-# public:maven-central - for Maven Central.
-# public:maven-googleandroid - for the Google Android repository.
-# public:maven-gradleplugins - for the Gradle plugins repository.
-# public:maven-commonsware - for the CommonsWare Android repository.
 variable "repositories" {
     type = any
-    description = "repository map"
+    description = <<-EOT
+    repository map
+
+    example
+
+    ```
+    {
+      npm = {
+           repository = "test" # optional. if not set, use key
+           description = "test description"
+           upstreams = ["test description"]
+           external_connections = "test description"
+      }
+    }
+    ```
+
+    external_connections
+
+    * public:npmjs - for the npm public repository.
+    * public:pypi - for the Python Package Index.
+    * public:maven-central - for Maven Central.
+    * public:maven-googleandroid - for the Google Android repository.
+    * public:maven-gradleplugins - for the Gradle plugins repository.
+    * public:maven-commonsware - for the CommonsWare Android repository.
+    EOT
 }
