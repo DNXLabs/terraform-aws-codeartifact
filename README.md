@@ -6,7 +6,7 @@ Terraform module which creates AWS CodeArtifact resources
 
 ```hcl
 module "codeartifact" {
-    source = ""
+    source  = "shepherd44/codeartifact/aws"
 
     domain = "domain-name"
     description = "codeartifact domain" # optional
