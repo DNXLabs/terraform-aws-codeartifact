@@ -43,7 +43,7 @@ output "repositories_endpoint" {
                 "npm": "https://${repo.domain}-${repo.domain_owner}.d.codeartifact.${data.aws_region.current.name}/npm/${repo.repository}/"
                 "maven": "https://${repo.domain}-${repo.domain_owner}.d.codeartifact.${data.aws_region.current.name}/maven/${repo.repository}/"
                 "gradle": "https://${repo.domain}-${repo.domain_owner}.d.codeartifact.${data.aws_region.current.name}/maven/${repo.repository}/"
-                "pip": null
+                "pypi": "https://${repo.domain}-${repo.domain_owner}.d.codeartifact.${data.aws_region.current.name}/pypi/${repo.repository}/"
                 "twine": null
                 "nuget": null
             }
